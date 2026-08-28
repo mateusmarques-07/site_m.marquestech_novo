@@ -58,7 +58,7 @@ if (siteCards.length && !reduceMotion) {
 
 // Paralaxe sutil ao mover o mouse (hero e criação de sites)
 if (!reduceMotion && window.matchMedia('(pointer: fine)').matches) {
-  [['heroVisual'], ['criacaoVisual']].forEach(([id]) => {
+  [['heroVisual'], ['criacaoVisual'], ['automacaoVisual']].forEach(([id]) => {
     const el = document.getElementById(id);
     if (!el) return;
     const section = el.closest('section');

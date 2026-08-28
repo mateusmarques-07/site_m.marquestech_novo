@@ -11,12 +11,28 @@ Site estático (HTML/CSS/JS puro, sem build). Basta abrir `index.html` no navega
 ## Pendências que precisam de decisão sua antes de publicar de verdade
 
 1. **Cláusula de cancelamento/fidelidade** (FAQ e `termos.html`): está com um texto genérico de "cobrança proporcional". Isso precisa passar por um advogado antes de virar contrato real com clientes.
-2. **Domínio**: assumi que o domínio NÃO está incluso na mensalidade (cliente registra o próprio). Se a regra for outra, é só avisar que eu ajusto o FAQ e o `termos.html`.
-3. **Gateway de pagamento real**: os botões de "assinar plano" hoje abrem o WhatsApp com mensagem pronta. Não há checkout automático (Pix/cartão) — isso exigiria integrar um provedor (Mercado Pago, Pagar.me, Stripe) com credenciais reais seu.
+2. ~~Domínio~~ — **resolvido (28/08):** modelo híbrido implementado no FAQ e no `termos.html` (cláusula 5) — o cliente escolhe entre domínio incluso (registrado por nós, sem custo extra enquanto a assinatura estiver ativa) ou domínio próprio. Falta só definir com apoio jurídico o que acontece com o domínio incluso em caso de cancelamento (transferência, taxa, prazo) — está sinalizado como placeholder no `termos.html`.
+3. **Gateway de pagamento real (Pix + cartão)**: os botões de "assinar plano" hoje abrem o WhatsApp com mensagem pronta. Combinado que o checkout automático via API será implementado — falta você escolher o provedor (Mercado Pago, Pagar.me ou Stripe) e me passar as credenciais. Ainda não implementado.
 4. **Imagem de compartilhamento (Open Graph)**: o `index.html` referencia `assets/og-image.png` (1200x630px) para a prévia do link quando compartilhado no WhatsApp — esse arquivo ainda não existe, porque eu só consigo gerar SVG, não PNG. Recomendo exportar uma versão em PNG da logo/banner (ex: via Figma, Canva, ou qualquer conversor online) e salvar nesse caminho.
-5. **Domínio real do site**: troque `https://www.mmarquestech.com.br/` (usado nas meta tags OG) pelo domínio definitivo quando escolhido.
+5. ~~Domínio real do site~~ — **resolvido (28/08):** meta tags OG agora apontam para `https://mmarquestech.vercel.app/` (domínio da própria Vercel). Troque de novo se registrar um domínio próprio depois.
 6. **Depoimentos**: são fictícios e estão marcados no código com o comentário `<!-- DEPOIMENTOS FICTÍCIOS — TROCAR POR REAIS -->`. Trocar assim que houver clientes reais dispostos a dar depoimento.
 7. **Analytics/Pixel**: não incluí Google Analytics/Meta Pixel — avise se for rodar tráfego pago que eu adiciono.
+
+## Revisão 3 (28/08/2026) — evolução visual completa
+
+Reformulação de design pedida para dar peso igual aos dois pilares do negócio (Automação/IA e Sites/E-commerce) e elevar o nível visual pra "startup SaaS premium". Referências de estilo: veltrixsolutions.com.br e brainsistemas.com.br.
+
+- **Hero:** headline reescrita ("Sites que vendem. Atendimento que nunca para."), com chips clicáveis dos dois pilares (🤖 Automação & IA / 💻 Sites & E-commerce) logo abaixo do texto — fica visível sem rolar a página. Badge de carrinho flutuante no mockup do navegador reforça e-commerce.
+- **Nova seção "Automação & IA"** (`#automacao`): espelha a seção de sites, mas com paleta violeta/azul, mockup de chat do WhatsApp maior e "flow nodes" (ícones flutuantes de agenda/notificação/chat conectados por linhas tracejadas) representando o fluxo de automação.
+- **Seção "Sites & E-commerce"** (`#sites`, antiga "Criação de Sites") ganhou mais peso: chips de destaque (100% responsivo, SEO otimizado, checkout seguro, sem taxa de adesão) e lista expandida (sites institucionais, landing pages, e-commerce, responsivo, integrações, otimização para conversão).
+- **Ritmo entre seções:** alternância de tom (`--navy` / `--navy-alt`), blobs de gradiente desfocados (`.bg-blob`) e cores por pilar (cyan/azul = sites, violeta/azul = IA) pra criar hierarquia visual sem poluir.
+- **Seção "Incluso" ganhou uma barra de números** (R$0 taxa de adesão, 100% hospedagem/SSL/suporte, Mensal) antes da grade de ícones — variação de formato pedida (números/dados).
+- **Nav e footer** reorganizados: "Sites" e "Automação" entraram no menu principal, substituindo "Diferenciais"/"Depoimentos" (que continuam só no footer).
+- **Bug corrigido:** os anéis orbitais decorativos (`.orbit-ring`, `.cv-ring`, novo `.av-ring`) usavam `border-image` com `border-radius`, combinação que não funciona na maioria dos navegadores e renderizava como linhas diagonais em vez de círculo. Trocado pela técnica de `mask` com `content-box`.
+- **FAQ do domínio reescrita** com comparação visual (`domínio incluso` vs `domínio próprio`) — ver pendência 2 resolvida acima. Mesma cláusula atualizada no `termos.html`.
+- **Meta tags OG** atualizadas para `https://mmarquestech.vercel.app/` — ver pendência 5 resolvida acima.
+- Testado com Playwright (desktop 1440px e mobile 390px, scroll completo pra disparar as animações de reveal) e checado console sem erros de JS antes do commit.
+- **Não implementado nesta revisão:** checkout automático via API (Pix/cartão) — depende de você escolher o provedor de pagamento e passar credenciais (pendência 3 acima).
 
 ## Revisão 2 (26/08/2026)
 - Hero dividido em duas colunas: texto + visual animado (janela de navegador + celular com chat do WhatsApp "digitando", anéis orbitando ao redor — tudo em CSS, sem imagens de banco de imagens, então não há problema de direito autoral).
