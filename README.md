@@ -6,7 +6,7 @@ Site estático (HTML/CSS/JS puro, sem build). Basta abrir `index.html` no navega
 - `index.html` — página principal (hero, planos, incluso, depoimentos, FAQ)
 - `privacidade.html`, `termos.html` — páginas legais (LGPD e assinatura)
 - `css/style.css`, `js/main.js`
-- `assets/` — logos (variante para fundo escuro, fundo claro, e favicon), imagens 3D geradas (`render-*.png`, fundo transparente), ícones individuais recortados de duas colmeias geradas (`icon-*.png`, fundo transparente), a foto original de e-commerce (`scene-ecommerce.jpg`) e o recorte sem fundo dela (`scene-ecommerce-cutout.png`, gerado com rembg/IA)
+- `assets/` — logos (variante para fundo escuro, fundo claro, e favicon), imagens 3D geradas (`render-*.png`, fundo transparente), ícones individuais recortados de duas colmeias geradas (`icon-*.png`, fundo transparente), a foto original de e-commerce (`scene-ecommerce.jpg`, não usada mais no site) e o render 3D atual da seção Sites — monitor + carrinho, fundo de estúdio limpo, recorte sem fundo feito com rembg/IA (`scene-cart-cutout.png`)
 
 ## Pendências que precisam de decisão sua antes de publicar de verdade
 
@@ -17,6 +17,13 @@ Site estático (HTML/CSS/JS puro, sem build). Basta abrir `index.html` no navega
 5. ~~Domínio real do site~~ — **resolvido (28/08):** meta tags OG agora apontam para `https://mmarquestech.vercel.app/` (domínio da própria Vercel). Troque de novo se registrar um domínio próprio depois.
 6. **Depoimentos**: são fictícios e estão marcados no código com o comentário `<!-- DEPOIMENTOS FICTÍCIOS — TROCAR POR REAIS -->`. Trocar assim que houver clientes reais dispostos a dar depoimento.
 7. **Analytics/Pixel**: não incluí Google Analytics/Meta Pixel — avise se for rodar tráfego pago que eu adiciono.
+
+## Revisão 7 (28/08/2026) — imagem do carrinho trocada por um render de estúdio (fundo limpo de verdade)
+
+O recorte da foto da Revisão 6 ainda ficava com uma névoa sutil na borda (limitação da ferramenta de recorte automático numa foto com fundo complexo). Mateus gerou uma imagem nova pedindo explicitamente "fundo sólido, sem esfumaçado, iluminação de estúdio" — um monitor com loja em dark mode + carrinho de compras saindo da tela, cheio de caixas, fundo de estúdio cinza-claro liso.
+
+- Fundo de estúdio liso = recorte com `rembg`/u2net saiu perfeito (sem buracos, sem halo) na primeira tentativa — confirma que pedir a imagem já com fundo limpo é melhor caminho do que tentar consertar um recorte difícil depois.
+- Troquei `scene-ecommerce-cutout.png` por `scene-cart-cutout.png` em `#sites` e removi a máscara radial que eu tinha adicionado como "rede de segurança" pro halo anterior — não é mais necessária.
 
 ## Revisão 6 (28/08/2026) — seção Sites volta a ser texto + imagem lado a lado
 
