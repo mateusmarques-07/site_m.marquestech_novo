@@ -48,12 +48,13 @@
   <section class="hero container">
     <div class="hero-grid">
       <div class="hero-content">
-        <div class="eyebrow reveal"><span class="dot"></span> AUTOMAÇÃO COM IA &middot; SITES &middot; E-COMMERCE</div>
+        <div class="eyebrow reveal"><span class="dot"></span> SITES &middot; E-COMMERCE &middot; IA &middot; AUTOMAÇÃO</div>
         <h1 class="reveal">Sites que vendem. <span class="accent">Atendimento que nunca para.</span></h1>
-        <p class="lead reveal">Criamos sites e lojas virtuais profissionais e automatizamos seu atendimento com Inteligência Artificial no WhatsApp — hospedagem, suporte e atualizações já inclusos numa mensalidade fixa, sem taxa de adesão.</p>
+        <p class="lead reveal">Criamos a presença digital da sua empresa — site ou loja virtual — e automatizamos o atendimento com Inteligência Artificial no WhatsApp. Hospedagem, suporte e atualizações já inclusos numa mensalidade fixa, sem taxa de adesão.</p>
         <div class="pillar-chips reveal">
-          <a class="pillar-chip pc-ai" href="#automacao"><span class="pc-icon">🤖</span> Automação &amp; IA</a>
-          <a class="pillar-chip pc-sites" href="#sites"><span class="pc-icon">💻</span> Sites &amp; E-commerce</a>
+          <a class="pillar-chip pc-sites" href="#sites"><span class="pc-icon">💻</span> Sites</a>
+          <a class="pillar-chip pc-ecommerce" href="#sites"><span class="pc-icon">🛒</span> E-commerce</a>
+          <a class="pillar-chip pc-ai" href="#automacao"><span class="pc-icon">🤖</span> IA &amp; Automação</a>
         </div>
         <div class="hero-ctas reveal">
           <a class="btn btn-primary" href="#planos">Ver planos e preços</a>
@@ -62,21 +63,17 @@
         <p class="social-proof reveal">Usado por <strong>profissionais autônomos, lojistas e clínicas</strong> que não querem depender de agência para colocar o site no ar.</p>
       </div>
       <div class="hero-visual reveal" id="heroVisual" aria-hidden="true">
-        <div class="bg-blob blob-cyan" style="width:260px;height:260px;top:-40px;right:-60px;"></div>
-        <div class="bg-blob blob-violet" style="width:220px;height:220px;bottom:-50px;left:-40px;"></div>
+        <div class="bg-blob blob-violet" style="width:200px;height:200px;bottom:-50px;left:-40px;opacity:0.5;"></div>
         <div class="orbit-ring ring-1"></div>
-        <div class="orbit-ring ring-2"></div>
-        <div class="orbit-dot"></div>
-        <div class="browser-mock">
-          <div class="mock-badge" style="top:-16px;right:-16px;" aria-hidden="true">🛒</div>
-          <div class="browser-bar"><span></span><span></span><span></span></div>
-          <div class="browser-body">
-            <div class="mock-block block-a"></div>
-            <div class="mock-block block-b"></div>
-            <div class="mock-block block-c"></div>
+        <div class="float-layer" style="position:absolute;inset:0;">
+          <div class="hero-panel">
+            <div class="hp-bar"><span></span><span></span><span></span></div>
+            <div class="hp-line"></div>
+            <div class="hp-line short"></div>
           </div>
         </div>
-        <div class="phone-mock">
+        <div class="phone-mock" style="bottom:34px;right:50px;">
+          <div class="mock-badge" style="top:-16px;right:-16px;" aria-hidden="true">🛒</div>
           <div class="phone-chat">
             <div class="chat-bubble in">Olá! Vi o site 👋</div>
             <div class="chat-bubble out">Posso te ajudar agora mesmo!</div>
@@ -88,47 +85,21 @@
   </section>
 
   <!-- SITES E E-COMMERCE -->
-  <section class="section criacao-destaque" id="sites">
-    <div class="bg-blob blob-cyan" style="width:420px;height:420px;top:-120px;right:-160px;"></div>
-    <div class="container criacao-grid">
-      <div class="criacao-visual reveal" id="criacaoVisual" aria-hidden="true">
-        <div class="cv-ring"></div>
-        <div class="cv-glow-dot"></div>
-        <div class="site-carousel" id="siteCarousel">
-          <div class="site-card active" data-label="Institucional">
-            <div class="browser-bar"><span></span><span></span><span></span></div>
-            <div class="browser-body">
-              <div class="sc-heading"></div>
-              <div class="sc-line w80"></div>
-              <div class="sc-line w60"></div>
-              <div class="sc-cta"></div>
-            </div>
+  <section class="section section-light tex-grid criacao-destaque" id="sites">
+    <div class="corner-device-wrap reveal-drift" style="position:absolute;width:340px;height:230px;top:-30px;right:-60px;" aria-hidden="true">
+      <div class="corner-device" id="criacaoVisual">
+        <div class="float-layer">
+          <div class="cd-panel">
+            <div class="cd-bar"><span></span><span></span><span></span></div>
+            <div class="cd-line"></div>
+            <div class="cd-line short"></div>
           </div>
-          <div class="site-card" data-label="Loja Virtual">
-            <div class="browser-bar"><span></span><span></span><span></span></div>
-            <div class="browser-body">
-              <div class="sc-grid">
-                <div class="sc-product"></div>
-                <div class="sc-product"></div>
-                <div class="sc-product"></div>
-                <div class="sc-product"></div>
-              </div>
-            </div>
-          </div>
-          <div class="site-card" data-label="Inteligente">
-            <div class="browser-bar"><span></span><span></span><span></span></div>
-            <div class="browser-body sc-chat">
-              <div class="chat-bubble in">Confirma sua consulta amanhã às 14h?</div>
-              <div class="chat-bubble out">Confirmado! ✅</div>
-            </div>
-          </div>
-        </div>
-        <div class="site-carousel-tag" id="carouselTag">Institucional</div>
-        <div class="site-carousel-dots" id="carouselDots">
-          <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
+          <div class="cd-chip">🛒</div>
         </div>
       </div>
-      <div class="criacao-text reveal">
+    </div>
+    <div class="container">
+      <div class="criacao-text reveal" style="max-width:760px;">
         <div class="eyebrow">SITES &amp; E-COMMERCE</div>
         <h2>Sites que representam sua marca. Lojas que vendem de verdade.</h2>
         <p>Cuidamos do design, da hospedagem e dos ajustes de conteúdo — você só aprova o resultado. Presença digital profissional, rápida e sem você precisar entender nada de tecnologia.</p>
@@ -138,16 +109,52 @@
           <span class="feature-chip fc-cyan">Checkout seguro</span>
           <span class="feature-chip fc-cyan">Sem taxa de adesão</span>
         </div>
-        <ul class="criacao-list">
-          <li>Sites institucionais</li>
-          <li>Landing pages</li>
-          <li>E-commerce / loja virtual</li>
-          <li>Sites responsivos (celular, tablet e desktop)</li>
-          <li>Integrações (WhatsApp, agenda, pagamento)</li>
-          <li>Otimização para conversão</li>
-        </ul>
+        <div class="duo-split">
+          <div class="duo-col">
+            <div class="duo-col-head"><span class="dc-icon">💻</span> Sites</div>
+            <ul>
+              <li>Sites institucionais e landing pages</li>
+              <li>Sites responsivos (celular, tablet e desktop)</li>
+              <li>Otimização para conversão</li>
+            </ul>
+            <div class="duo-tags">
+              <span class="duo-tag">RESPONSIVO</span>
+              <span class="duo-tag">SEO</span>
+            </div>
+          </div>
+          <div class="duo-col duo-ecommerce">
+            <div class="duo-col-head"><span class="dc-icon">🛒</span> E-commerce</div>
+            <ul>
+              <li>Loja virtual completa, com painel de produtos</li>
+              <li>Checkout seguro e controle de estoque</li>
+              <li>Integrações (WhatsApp, agenda, pagamento)</li>
+            </ul>
+            <div class="duo-tags">
+              <span class="duo-tag">CHECKOUT</span>
+              <span class="duo-tag">PAGAMENTOS</span>
+            </div>
+          </div>
+        </div>
         <a class="btn btn-primary" href="#planos">Ver planos de site e e-commerce</a>
       </div>
+    </div>
+  </section>
+
+  <!-- JORNADA: DO PRIMEIRO CLIQUE AO CLIENTE -->
+  <section class="section section-light tone-2" id="jornada">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow" style="margin-bottom:14px;">COMO FUNCIONA</span>
+        <h2>Do primeiro clique ao cliente atendido</h2>
+        <p>Sites, e-commerce, IA e automação só fazem sentido juntos quando resolvem a mesma jornada, do início ao fim.</p>
+      </div>
+      <ol class="journey-steps reveal">
+        <li class="journey-step"><span class="journey-num jn-cyan">🔍</span><h4>Encontra sua empresa</h4><p>Google, Instagram ou indicação</p></li>
+        <li class="journey-step"><span class="journey-num jn-cyan">💻</span><h4>Conhece seu site</h4><p>Presença digital profissional</p></li>
+        <li class="journey-step"><span class="journey-num jn-blue">💬</span><h4>Entra em contato</h4><p>Direto pelo WhatsApp</p></li>
+        <li class="journey-step"><span class="journey-num jn-violet">🤖</span><h4>IA responde na hora</h4><p>Sem esperar seu horário comercial</p></li>
+        <li class="journey-step is-last"><span class="journey-num">✅</span><h4>Agenda ou compra</h4><p>Sua empresa recebe o cliente</p></li>
+      </ol>
     </div>
   </section>
 
@@ -207,10 +214,12 @@
 
         <!-- PLANO 1 -->
         <div class="plan-card reveal">
+          <div class="plan-watermark" aria-hidden="true"><span>💻</span></div>
+          <div class="plan-pillar pp-site">💻 SITE</div>
           <div class="plan-target">Profissionais autônomos e liberais</div>
           <h3>Essencial</h3>
           <p class="plan-tagline">"Construa sua autoridade digital e lote sua agenda pelo valor de uma pizza por semana."</p>
-          <div class="plan-price">R$ 119<span>,00 / mês</span></div>
+          <div class="plan-price">R$ 109<span>,00 / mês</span></div>
           <div class="plan-period">Psicólogos, advogados, consultores, contadores</div>
           <ul class="plan-features">
             <li>Site institucional moderno de página única (Landing Page)</li>
@@ -218,17 +227,19 @@
             <li>Otimizado para celulares</li>
             <li>Hospedagem e suporte inclusos</li>
           </ul>
-          <a class="btn btn-ghost plan-cta" href="https://wa.me/5561982998511?text=Ol%C3%A1!%20Quero%20assinar%20o%20plano%20Essencial%20(R%24%20119%2C00%2Fm%C3%AAs)%20da%20M.marquestech." target="_blank" rel="noopener">Quero o plano Essencial</a>
+          <a class="btn btn-ghost plan-cta" href="https://wa.me/5561982998511?text=Ol%C3%A1!%20Quero%20assinar%20o%20plano%20Essencial%20(R%24%20109%2C00%2Fm%C3%AAs)%20da%20M.marquestech." target="_blank" rel="noopener">Quero o plano Essencial</a>
         </div>
 
         <!-- PLANO 2 -->
         <div class="plan-card featured reveal">
+          <div class="plan-watermark" aria-hidden="true"><span>🛒</span></div>
           <div class="plan-badge-popular">Mais popular</div>
           <div class="plan-icon-float" aria-hidden="true">🛒</div>
+          <div class="plan-pillar pp-ecommerce">🛒 E-COMMERCE</div>
           <div class="plan-target">Comércio e lojas virtuais</div>
           <h3>Especialista</h3>
           <p class="plan-tagline">"Sua vitrine aberta para o mundo 24h por dia, sem pagar comissões abusivas por venda."</p>
-          <div class="plan-price">R$ 299<span>,00 / mês</span></div>
+          <div class="plan-price">R$ 199<span>,00 / mês</span></div>
           <div class="plan-period">Novas marcas, lojistas, catálogo online</div>
           <ul class="plan-features">
             <li>Loja Virtual Completa</li>
@@ -237,16 +248,17 @@
             <li>Controle de estoque simples</li>
             <li>Hospedagem e suporte inclusos</li>
           </ul>
-          <a class="btn btn-primary plan-cta" href="https://wa.me/5561982998511?text=Ol%C3%A1!%20Quero%20assinar%20o%20plano%20Especialista%20(R%24%20299%2C00%2Fm%C3%AAs)%20da%20M.marquestech." target="_blank" rel="noopener">Quero o plano Especialista</a>
+          <a class="btn btn-primary plan-cta" href="https://wa.me/5561982998511?text=Ol%C3%A1!%20Quero%20assinar%20o%20plano%20Especialista%20(R%24%20199%2C00%2Fm%C3%AAs)%20da%20M.marquestech." target="_blank" rel="noopener">Quero o plano Especialista</a>
         </div>
 
         <!-- PLANO 3 -->
         <div class="plan-card reveal">
-          <span class="ai-badge">IA</span>
+          <div class="plan-watermark" aria-hidden="true"><span>🤖</span></div>
+          <div class="plan-pillar pp-ia">🤖 IA &amp; AUTOMAÇÃO</div>
           <div class="plan-target">Médicos, clínicas e restaurantes</div>
           <h3>Inteligente</h3>
           <p class="plan-tagline">"Automatize seu atendimento e reduza custos operacionais com um funcionário digital que trabalha 24h por você."</p>
-          <div class="plan-price">R$ 449<span>,00 / mês</span></div>
+          <div class="plan-price">R$ 349<span>,00 / mês</span></div>
           <div class="plan-period">Clínicas e restaurantes</div>
 
           <div class="plan-subblock">
@@ -261,7 +273,7 @@
           <ul class="plan-features">
             <li>Hospedagem robusta e suporte prioritário inclusos</li>
           </ul>
-          <a class="btn btn-ghost plan-cta" href="https://wa.me/5561982998511?text=Ol%C3%A1!%20Quero%20assinar%20o%20plano%20Inteligente%20(R%24%20449%2C00%2Fm%C3%AAs)%20da%20M.marquestech." target="_blank" rel="noopener">Quero o plano Inteligente</a>
+          <a class="btn btn-ghost plan-cta" href="https://wa.me/5561982998511?text=Ol%C3%A1!%20Quero%20assinar%20o%20plano%20Inteligente%20(R%24%20349%2C00%2Fm%C3%AAs)%20da%20M.marquestech." target="_blank" rel="noopener">Quero o plano Inteligente</a>
         </div>
 
       </div>
@@ -269,7 +281,7 @@
   </section>
 
   <!-- INCLUSO -->
-  <section class="section section-alt" id="incluso">
+  <section class="section section-light tex-dots tone-2" id="incluso">
     <div class="container">
       <div class="section-head reveal">
         <h2>O que está incluso em todos os planos?</h2>
@@ -387,7 +399,7 @@
   </section>
 
   <!-- FAQ -->
-  <section class="section" id="faq">
+  <section class="section section-light" id="faq">
     <div class="container">
       <div class="section-head reveal">
         <h2>Perguntas frequentes</h2>

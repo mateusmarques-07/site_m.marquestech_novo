@@ -28,7 +28,7 @@ document.querySelectorAll('.faq-item').forEach((item) => {
 });
 
 // Scroll reveal
-const revealEls = document.querySelectorAll('.reveal');
+const revealEls = document.querySelectorAll('.reveal, .reveal-drift');
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -39,24 +39,9 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.15 });
 revealEls.forEach((el) => revealObserver.observe(el));
 
-// Carrossel "Criação de Sites" (Institucional / Loja Virtual / Inteligente)
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const siteCards = document.querySelectorAll('#siteCarousel .site-card');
-const carouselDots = document.querySelectorAll('#carouselDots .dot');
-const carouselTag = document.getElementById('carouselTag');
-if (siteCards.length && !reduceMotion) {
-  let cardIndex = 0;
-  setInterval(() => {
-    siteCards[cardIndex].classList.remove('active');
-    carouselDots[cardIndex].classList.remove('active');
-    cardIndex = (cardIndex + 1) % siteCards.length;
-    siteCards[cardIndex].classList.add('active');
-    carouselDots[cardIndex].classList.add('active');
-    carouselTag.textContent = siteCards[cardIndex].dataset.label;
-  }, 3000);
-}
 
-// Paralaxe sutil ao mover o mouse (hero e criação de sites)
+// Paralaxe sutil ao mover o mouse (hero, sites e automação)
 if (!reduceMotion && window.matchMedia('(pointer: fine)').matches) {
   [['heroVisual'], ['criacaoVisual'], ['automacaoVisual']].forEach(([id]) => {
     const el = document.getElementById(id);

@@ -18,6 +18,25 @@ Site estático (HTML/CSS/JS puro, sem build). Basta abrir `index.html` no navega
 6. **Depoimentos**: são fictícios e estão marcados no código com o comentário `<!-- DEPOIMENTOS FICTÍCIOS — TROCAR POR REAIS -->`. Trocar assim que houver clientes reais dispostos a dar depoimento.
 7. **Analytics/Pixel**: não incluí Google Analytics/Meta Pixel — avise se for rodar tráfego pago que eu adiciono.
 
+## Revisão 4 (28/08/2026) — direção de arte: menos "template SaaS", mais produto digital
+
+Duas rodadas de refinamento sobre a Revisão 3, pedidas depois de ver o resultado no ar.
+
+**Rodada 1 — tirar a cara de mockup genérico:**
+- Removida a janela de navegador com blocos de conteúdo falsos (hero) e o carrossel de 3 telas falsas (seção Sites) — ficavam ruins especialmente sobre fundo claro.
+- Nova seção **"Jornada"** (`#jornada`, entre Sites e Automação): stepper de 5 passos ("Do primeiro clique ao cliente atendido"), a seção mais minimalista do site de propósito.
+- Seção "Sites & E-commerce" virou fundo claro (`--paper`), texto em largura total, com um acento abstrato de gradiente + linhas/pontos no canto (sem imagem real).
+- Seção "Incluso" também virou fundo claro, com os cards de vidro escuro trocados por blocos brancos simples.
+- Planos ganharam uma tag de pilar por card (💻 SITE / 🛒 E-COMMERCE / 🤖 IA & AUTOMAÇÃO) e os valores foram atualizados: **R$109 / R$199 / R$349** (antes 119/299/449, incluindo nos links de WhatsApp).
+
+**Rodada 2 — mais sofisticação, menos "AI generic":**
+- Hero: painel de vidro 3D (perspectiva/rotação em CSS puro, sem lib 3D) com brilho de gradiente e uma linha de destaque, representando "um produto digital" de forma abstrata — celular do WhatsApp flutuando na frente. Flutuação lenta (12s) numa camada própria (`.float-layer`) pra nunca conflitar com o parallax do mouse que já existia.
+- Sites & E-commerce: o acento do canto virou um fragmento 3D de tela (`.corner-device`) parcialmente cortado pela quina da seção, com um chip de carrinho, esmaecendo em gradiente (`mask-image`) até o espaço limpo do texto. Entra suavemente quando a seção aparece na rolagem (`.reveal-drift`, reusa o mesmo `IntersectionObserver` do resto do site) em vez de animar sozinho o tempo todo.
+- Jornada: números viraram ícones (🔍💻💬🤖✅), e a linha entre as etapas muda de cor conforme passa de Sites (ciano) → contato (azul) → IA (violeta) — reforça visualmente que é a mesma jornada atravessando pilares diferentes. Pulso bem sutil e sequencial nos círculos.
+- Planos: cada card ganhou um ícone gigante e quase invisível (opacity 0.1) sangrando no canto inferior, só como textura — usa `isolation: isolate` + `z-index: -1` pra ficar atrás do conteúdo sem vazar pros cards vizinhos.
+- Automação, Incluso, FAQ e depoimentos ficaram como estavam nessa rodada — mantidos limpos de propósito, sem adicionar elemento só por adicionar.
+- Testado com Playwright (desktop 1440px e mobile 390px) e checado console sem erros antes de cada commit. Nos celulares, os elementos 3D de canto (Hero e Sites) ficam ocultos — o layout foca em texto e nos elementos com conteúdo real.
+
 ## Revisão 3 (28/08/2026) — evolução visual completa
 
 Reformulação de design pedida para dar peso igual aos dois pilares do negócio (Automação/IA e Sites/E-commerce) e elevar o nível visual pra "startup SaaS premium". Referências de estilo: veltrixsolutions.com.br e brainsistemas.com.br.
