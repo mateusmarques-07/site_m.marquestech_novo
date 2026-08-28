@@ -6,7 +6,7 @@ Site estático (HTML/CSS/JS puro, sem build). Basta abrir `index.html` no navega
 - `index.html` — página principal (hero, planos, incluso, depoimentos, FAQ)
 - `privacidade.html`, `termos.html` — páginas legais (LGPD e assinatura)
 - `css/style.css`, `js/main.js`
-- `assets/` — logos (variante para fundo escuro, fundo claro, e favicon), imagens 3D geradas (`render-*.png`, fundo transparente), ícones individuais recortados de duas colmeias geradas (`icon-*.png`, fundo transparente) e uma foto tratada de e-commerce (`scene-ecommerce.jpg`)
+- `assets/` — logos (variante para fundo escuro, fundo claro, e favicon), imagens 3D geradas (`render-*.png`, fundo transparente), ícones individuais recortados de duas colmeias geradas (`icon-*.png`, fundo transparente), a foto original de e-commerce (`scene-ecommerce.jpg`) e o recorte sem fundo dela (`scene-ecommerce-cutout.png`, gerado com rembg/IA)
 
 ## Pendências que precisam de decisão sua antes de publicar de verdade
 
@@ -17,6 +17,14 @@ Site estático (HTML/CSS/JS puro, sem build). Basta abrir `index.html` no navega
 5. ~~Domínio real do site~~ — **resolvido (28/08):** meta tags OG agora apontam para `https://mmarquestech.vercel.app/` (domínio da própria Vercel). Troque de novo se registrar um domínio próprio depois.
 6. **Depoimentos**: são fictícios e estão marcados no código com o comentário `<!-- DEPOIMENTOS FICTÍCIOS — TROCAR POR REAIS -->`. Trocar assim que houver clientes reais dispostos a dar depoimento.
 7. **Analytics/Pixel**: não incluí Google Analytics/Meta Pixel — avise se for rodar tráfego pago que eu adiciono.
+
+## Revisão 6 (28/08/2026) — seção Sites volta a ser texto + imagem lado a lado
+
+Mateus não gostou do tratamento "foto saindo do canto com sombra" da Revisão 5 na seção Sites & E-commerce. Pediu pra tirar o fundo da foto e colocar ela ao lado do texto, num espaço próprio.
+
+- Removi o fundo da foto de verdade (não só um degradê por cima) usando **rembg** (modelo u2net, rodando numa cópia reduzida da imagem pra não estourar a memória do VPS — a versão em resolução total travava o processo). Resultado em `assets/scene-ecommerce-cutout.png`.
+- A seção `#sites` voltou a ser uma grade de duas colunas (`.sites-grid`: texto | imagem), com a foto recortada centralizada na coluna direita, brilho suave atrás e uma máscara radial bem aberta só pra suavizar a borda restante do recorte — sem o efeito de "sangrar pelo canto" que não tinha agradado.
+- Removido o código agora morto do tratamento anterior (`.corner-device`, `.photo-frame`, `.reveal-drift`).
 
 ## Revisão 5 (28/08/2026) — imagens 3D reais no lugar dos mockups em CSS
 
