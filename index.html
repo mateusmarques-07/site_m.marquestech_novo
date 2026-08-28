@@ -63,13 +63,27 @@
         <p class="social-proof reveal">Usado por <strong>profissionais autônomos, lojistas e clínicas</strong> que não querem depender de agência para colocar o site no ar.</p>
       </div>
       <div class="hero-visual reveal" id="heroVisual" aria-hidden="true">
-        <div class="bg-blob blob-violet" style="width:200px;height:200px;bottom:-50px;left:-40px;opacity:0.5;"></div>
+        <div class="bg-blob blob-violet" style="width:260px;height:260px;bottom:-60px;left:-50px;opacity:0.6;"></div>
+        <div class="bg-blob blob-cyan" style="width:220px;height:220px;top:-40px;right:60px;opacity:0.35;"></div>
         <div class="orbit-ring ring-1"></div>
         <div class="float-layer" style="position:absolute;inset:0;">
-          <div class="hero-panel">
-            <div class="hp-bar"><span></span><span></span><span></span></div>
-            <div class="hp-line"></div>
-            <div class="hp-line short"></div>
+          <div class="hero-panel-cycle" id="heroCycle">
+            <div class="hp-state hp-active">
+              <div class="hr-glow hr-glow-cyan"></div>
+              <img class="hr-img" src="assets/render-site.png" alt="Site profissional" loading="eager">
+            </div>
+            <div class="hp-state">
+              <div class="hr-glow hr-glow-blue"></div>
+              <img class="hr-img" src="assets/render-ecommerce.png" alt="Loja virtual" loading="lazy">
+            </div>
+            <div class="hp-state">
+              <div class="hr-glow hr-glow-violet"></div>
+              <img class="hr-img" src="assets/render-ia.png" alt="Atendimento com IA" loading="lazy">
+            </div>
+            <div class="hp-state">
+              <div class="hr-glow hr-glow-mix"></div>
+              <img class="hr-img" src="assets/render-automacao.png" alt="Automação" loading="lazy">
+            </div>
           </div>
         </div>
         <div class="phone-mock" style="bottom:34px;right:50px;">
@@ -86,17 +100,19 @@
 
   <!-- SITES E E-COMMERCE -->
   <section class="section section-light tex-grid criacao-destaque" id="sites">
-    <div class="corner-device-wrap reveal-drift" style="position:absolute;width:340px;height:230px;top:-30px;right:-60px;" aria-hidden="true">
+    <div class="corner-device-wrap reveal-drift" style="position:absolute;width:420px;height:420px;top:-24px;right:-30px;" aria-hidden="true">
       <div class="corner-device" id="criacaoVisual">
-        <div class="float-layer">
-          <div class="cd-panel">
-            <div class="cd-bar"><span></span><span></span><span></span></div>
-            <div class="cd-line"></div>
-            <div class="cd-line short"></div>
+        <div class="cd-glow" style="width:260px;height:260px;right:40px;top:30px;"></div>
+        <div class="float-layer" style="height:100%;display:flex;align-items:flex-start;justify-content:flex-end;">
+          <div class="photo-frame">
+            <img src="assets/scene-ecommerce.jpg" alt="Loja virtual">
+            <div class="photo-shade"></div>
           </div>
-          <div class="cd-chip">🛒</div>
         </div>
       </div>
+    </div>
+    <div class="corner-accent-bl" aria-hidden="true">
+      <img src="assets/icon-seguranca.png" alt="">
     </div>
     <div class="container">
       <div class="criacao-text reveal" style="max-width:760px;">
@@ -183,12 +199,10 @@
         <a class="btn btn-primary" href="#planos">Ver plano com automação</a>
       </div>
       <div class="automacao-visual reveal" id="automacaoVisual" aria-hidden="true">
-        <div class="av-ring"></div>
-        <div class="flow-node fn-1">📅</div>
-        <div class="flow-node fn-2">💬</div>
-        <div class="flow-node fn-3">🔔</div>
-        <div class="flow-line fl-1"></div>
-        <div class="flow-line fl-2"></div>
+        <div class="av-render" style="transform:translate(-118px,-64px);">
+          <div class="hr-glow hr-glow-mix" style="width:300px;height:300px;"></div>
+          <img class="hr-img" src="assets/render-automacao.png" alt="" style="max-width:280px;">
+        </div>
         <div class="automacao-phone">
           <div class="ap-status"><span class="dot"></span> ATENDENDO AGORA</div>
           <div class="phone-chat">

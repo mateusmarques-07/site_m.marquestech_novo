@@ -41,6 +41,17 @@ revealEls.forEach((el) => revealObserver.observe(el));
 
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+// Hero: alterna os 4 pilares (Site / E-commerce / IA / Automação) na composição 3D
+const heroStates = document.querySelectorAll('#heroCycle .hp-state');
+if (heroStates.length && !reduceMotion) {
+  let heroIndex = 0;
+  setInterval(() => {
+    heroStates[heroIndex].classList.remove('hp-active');
+    heroIndex = (heroIndex + 1) % heroStates.length;
+    heroStates[heroIndex].classList.add('hp-active');
+  }, 3500);
+}
+
 // Paralaxe sutil ao mover o mouse (hero, sites e automação)
 if (!reduceMotion && window.matchMedia('(pointer: fine)').matches) {
   [['heroVisual'], ['criacaoVisual'], ['automacaoVisual']].forEach(([id]) => {

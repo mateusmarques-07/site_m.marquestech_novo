@@ -6,7 +6,7 @@ Site estático (HTML/CSS/JS puro, sem build). Basta abrir `index.html` no navega
 - `index.html` — página principal (hero, planos, incluso, depoimentos, FAQ)
 - `privacidade.html`, `termos.html` — páginas legais (LGPD e assinatura)
 - `css/style.css`, `js/main.js`
-- `assets/` — logos (variante para fundo escuro, fundo claro, e favicon)
+- `assets/` — logos (variante para fundo escuro, fundo claro, e favicon), imagens 3D geradas (`render-*.png`, fundo transparente), ícones individuais recortados de duas colmeias geradas (`icon-*.png`, fundo transparente) e uma foto tratada de e-commerce (`scene-ecommerce.jpg`)
 
 ## Pendências que precisam de decisão sua antes de publicar de verdade
 
@@ -17,6 +17,16 @@ Site estático (HTML/CSS/JS puro, sem build). Basta abrir `index.html` no navega
 5. ~~Domínio real do site~~ — **resolvido (28/08):** meta tags OG agora apontam para `https://mmarquestech.vercel.app/` (domínio da própria Vercel). Troque de novo se registrar um domínio próprio depois.
 6. **Depoimentos**: são fictícios e estão marcados no código com o comentário `<!-- DEPOIMENTOS FICTÍCIOS — TROCAR POR REAIS -->`. Trocar assim que houver clientes reais dispostos a dar depoimento.
 7. **Analytics/Pixel**: não incluí Google Analytics/Meta Pixel — avise se for rodar tráfego pago que eu adiciono.
+
+## Revisão 5 (28/08/2026) — imagens 3D reais no lugar dos mockups em CSS
+
+Mateus gerou imagens (via Gemini) seguindo prompts que eu escrevi (render 3D estilo "glass", fundo preto, cores da marca). Processei tudo com Pillow: as 4 imagens principais viraram PNG com transparência de verdade (removi o fundo preto calculando alpha a partir do brilho de cada pixel), e as duas "colmeias" com vários ícones juntos foram recortadas em 19 arquivos individuais — tudo em `assets/`.
+
+- **Hero**: os 4 estados que alternam a cada 3,5s agora são as imagens reais (notebook = Site, sacola + check = E-commerce, esfera com balões de chat = IA, blocos conectados = Automação), com um glow radial atrás de cada uma. O painel desenhado em CSS (`hero-panel`) foi removido.
+- **Automação**: os blocos conectados aparecem parcialmente atrás do celular (mesma ideia de elemento cortado pela composição, sem competir com o chat).
+- **Sites & E-commerce**: passou por duas versões nesta revisão. Primeiro usei a imagem da sacola como elemento flutuante saindo do canto; Mateus achou fraco e mandou mais duas fotos (mockup fotográfico de notebook + carrinho + caixas). Recortei a que tinha o fundo mais alinhado com a paleta do site (tons de azul/verde-água) removendo a pessoa que aparecia desfocada ao fundo (`scene-ecommerce.jpg`), e apliquei duas camadas de degradê: uma escurece a própria foto a partir do canto (`.photo-shade`), outra (`mask-image`) faz a foto inteira sumir suavemente antes de chegar no texto.
+- Continuo sem acesso a geração de imagem ou banco de fotos neste ambiente — todo esse processamento (transparência, recorte, degradês) foi feito programaticamente em cima do que o Mateus gerou e enviou.
+- **Sobra na pasta**: 16 imagens/ícones (agenda, hospedagem, pagamento, SEO, multi-dispositivo, avaliação, suporte, velocidade, painel admin, atendimento 24h, crescimento, integrações, notificação, rede, botão avançar) não foram usados ainda — ficam disponíveis pra próximas seções se fizer sentido.
 
 ## Revisão 4 (28/08/2026) — direção de arte: menos "template SaaS", mais produto digital
 
