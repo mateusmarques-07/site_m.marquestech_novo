@@ -1,4 +1,4 @@
-// M.marquestech · interações do site (JS puro, sem dependências)
+// NEXO Marques · interações do site (JS puro, sem dependências)
 (function () {
   const reduz = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 

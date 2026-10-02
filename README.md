@@ -1,4 +1,13 @@
-# M.marquestech — Site institucional
+# NEXO Marques: site institucional (linha NEXO M)
+
+A empresa se chama **NEXO Marques** desde 02/10/2026 (antes M.marquestech; CNPJ não muda). Site no ar em https://nexomarques.vercel.app (o antigo mmarquestech.vercel.app redireciona).
+
+**Como editar:** o `index.html` é gerado por `reformulacao-nexo/build_index.js` (pasta local, fora do git). Para mudar textos ou produtos, edite o build e rode `node reformulacao-nexo/build_index.js` na raiz. Estilos em `css/style.css` (inclui as páginas legais) e interações em `js/main.js`.
+
+---
+
+Histórico do site anterior (M.marquestech) abaixo.
+
 
 Site estático (HTML/CSS/JS puro, sem build). Basta abrir `index.html` no navegador ou subir a pasta inteira em qualquer hospedagem estática (Vercel, Netlify, GitHub Pages, cPanel).
 

@@ -1,4 +1,4 @@
-/* M.marquestech · site NEXO M (reformulação 10/2026)
+/* NEXO Marques · site NEXO M (reformulação 10/2026)
    Base off-white + grafite + petróleo. Cores de produto só como identificação.
    Cards só nos produtos; o resto é editorial (linhas, divisórias, números). */
 :root{
@@ -56,6 +56,7 @@ nav .cta{padding:10px 16px;border-radius:10px;font-size:14px}
 .mnav{display:none}
 .logo{display:inline-flex;align-items:center;gap:10px;font-family:var(--disp);font-stretch:85%;font-weight:850;font-size:20px}
 .logo-mark{flex:none}
+.logo em{font-style:normal;color:var(--acc)}
 
 /* hero */
 .hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center;padding-block:clamp(18px,4vw,48px) 52px}
